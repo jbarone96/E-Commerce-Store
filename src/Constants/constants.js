@@ -12,10 +12,10 @@ export const CANCEL_GET_PRODUCTS = "CANCEL_GET_PRODUCTS";
 export const CLEAR_SEARCH_STATE = "CLEAR_SEARCH_STATE";
 export const SET_LAST_REF_KEY = "SET_LAST_REF_KEY";
 
-export const SET_BASKET_ITEMS = "SET_BASKET_ITEMS";
-export const ADD_TO_BASKET = "ADD_TO_BASKET";
-export const REMOVE_FROM_BASKET = "REMOVE_FROM_BASKET";
-export const CLEAR_BASKET = "CLEAR_BASKET";
+export const SET_CART_ITEMS = "SET_CART_ITEMS";
+export const ADD_TO_CART = "ADD_TO_CART";
+export const REMOVE_FROM_CART = "REMOVE_FROM_CART";
+export const CLEAR_CART = "CLEAR_CART";
 export const ADD_QTY_ITEM = "ADD_QTY_ITEM";
 export const MINUS_QTY_ITEM = "MINUS_QTY_ITEM";
 

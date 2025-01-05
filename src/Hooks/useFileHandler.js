@@ -48,7 +48,25 @@ const useFileHandler = (initialState) => {
 
       setIsLoading(false);
     } else {
+      const reader = new FileReader();
+
+      reader.addEventListener("load", (event) => {
+        setImage({
+          ...image,
+          [name]: { file: img, url: event.target.result },
+        });
+        setIsLoading(false);
+      });
+      reader.readAsDataURL(img);
     }
+  };
+
+  return {
+    image,
+    setImage,
+    isLoading,
+    onFileChange,
+    removeImage,
   };
 };
 
