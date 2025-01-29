@@ -5,8 +5,8 @@ import {
   CLEAR_SEARCH_STATE,
   EDIT_PRODUCT,
   EDIT_PRODUCT_SUCCESS,
-  GET_PRODUCT,
-  GET_PRODUCT_SUCCESS,
+  GET_PRODUCTS,
+  GET_PRODUCTS_SUCCESS,
   REMOVE_PRODUCT,
   REMOVE_PRODUCT_SUCCESS,
   SEARCH_PRODUCT,
@@ -14,12 +14,12 @@ import {
 } from "../../Constants/constants";
 
 export const getProducts = (products) => ({
-  type: GET_PRODUCT,
+  type: GET_PRODUCTS,
   payload: products,
 });
 
 export const getProductsSuccess = (products) => ({
-  type: GET_PRODUCT_SUCCESS,
+  type: GET_PRODUCTS_SUCCESS,
   payload: products,
 });
 

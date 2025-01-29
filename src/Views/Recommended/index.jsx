@@ -1,16 +1,12 @@
 import { MessageDisplay } from "../../Components/Common";
-import { ProductShowcaseGrid } from "../../Components/Product";
-import {
-  useDocumentTitle,
-  useRecommendedProducts,
-  useScrollTop,
-} from "../../Hooks";
+import { ProductShowcase } from "../../Components/Product";
+import { useDocument, useRecommendedProducts, useScroll } from "../../Hooks";
 // import bannerImg from "@/images/bannerImg"
 import React from "react";
 
 const RecommendedProducts = () => {
-  useDocumentTitle("Recommended Products | Reactify");
-  useScrollTop();
+  useDocument("Recommended Products | Reactify");
+  useScroll();
 
   const { recommendedProducts, fetchRecommendedProducts, isLoading, error } =
     useRecommendedProducts();
@@ -35,7 +31,7 @@ const RecommendedProducts = () => {
                 buttonLabel="Try Again"
               />
             ) : (
-              <ProductShowcaseGrid
+              <ProductShowcase
                 products={recommendedProducts}
                 skeletonCount={6}
               />

@@ -1,4 +1,4 @@
-import { AdminNavigation, AdminSideBar } from "../Components/Common";
+import { AdminNavigation, AdminSidePanel } from "../Components/Common";
 import PropType from "prop-types";
 import React from "react";
 import { connect } from "react-redux";
@@ -12,7 +12,7 @@ const AdminRoute = ({ isAuth, role, component: Component, ...rest }) => (
         <>
           <AdminNavigation />
           <main className="content-admin">
-            <AdminSideBar />
+            <AdminSidePanel />
             <div className="content-admin-wrapper">
               <Component {...props} />
             </div>

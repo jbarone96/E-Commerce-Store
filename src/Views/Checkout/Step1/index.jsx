@@ -1,8 +1,8 @@
 import { ArrowRightOutlined, ShopOutlined } from "@ant-design/icons";
 import { CartItem } from "../../../Components/Cart";
 import { CHECKOUT_2 } from "../../../Constants/routes";
-import { displayMoney } from "../../../Helpers/utility";
-import { useDocumentTitle, useScrollTop } from "../../../Hooks";
+import { displayCurrency } from "../../../Helpers/utility";
+import { useDocument, useScroll } from "../../../Hooks";
 import PropType from "prop-types";
 import React from "react";
 import { useDispatch } from "react-redux";
@@ -11,8 +11,8 @@ import { StepTracker } from "../Components";
 import withCheckout from "../Utility/withCheckout";
 
 const OrderSummary = ({ cart, subtotal }) => {
-  useDocumentTitle("Checkout Step 1 | Reactify");
-  useScrollTop();
+  useDocument("Checkout Step 1 | Reactify");
+  useScroll();
   const dispatch = useDispatch();
   const history = useHistory();
   const onClickPrevious = () => history.push("/");
@@ -38,7 +38,7 @@ const OrderSummary = ({ cart, subtotal }) => {
         <br />
         <div className="cart-total text-right">
           <p className="cart-total-title">Subtotal:</p>
-          <h2 className="cart-total-amount">{displayMoney(subtotal)}</h2>
+          <h2 className="cart-total-amount">{displayCurrency(subtotal)}</h2>
         </div>
         <br />
         <div className="checkout-shipping-action">

@@ -1,9 +1,9 @@
 import { ArrowRightOutlined, LoadingOutlined } from "@ant-design/icons";
 import { SocialLogin } from "../../../Components/Common";
-import { CustomInput } from "formik";
+import { CustomInput } from "../../../Components/Custom";
 import { FORGOT_PASSWORD, SIGNUP } from "../../../Constants/routes";
 import { Field, Form, Formik } from "formik";
-import { useDocumentTitle, useScrollTop } from "../../../Hooks";
+import { useDocument, useScroll } from "../../../Hooks";
 import PropType from "prop-types";
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -30,8 +30,8 @@ const SignIn = ({ history }) => {
 
   const dispatch = useDispatch();
 
-  useScrollTop();
-  useDocumentTitle("Sign In | Reactify");
+  useScroll();
+  useDocument("Sign In | Reactify");
 
   useEffect(() => {
     dispatch(setAuthStatus(null));

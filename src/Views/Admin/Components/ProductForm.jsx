@@ -2,10 +2,10 @@
 import { CheckOutlined, LoadingOutlined } from "@ant-design/icons";
 import { ImageLoader } from "../../../Components/Common";
 import {
-  CustomColorInput,
-  CustomCreatableSelect,
+  CustomColor,
+  CustomCreateable,
   CustomInput,
-  CustomTextarea,
+  CustomTextArea,
 } from "../../../Components/Custom";
 import { Field, FieldArray, Form, Formik } from "formik";
 import { useFileHandler } from "../../../Hooks";
@@ -111,7 +111,7 @@ const ProductForm = ({ product, onSubmit, isLoading }) => {
                 </div>
                 &nbsp;
                 <div className="product-form-field">
-                  <CustomCreatableSelect
+                  <CustomCreateable
                     defaultValue={{ label: values.brand, value: values.brand }}
                     name="brand"
                     iid="brand"
@@ -129,7 +129,7 @@ const ProductForm = ({ product, onSubmit, isLoading }) => {
                   id="description"
                   rows={3}
                   label="* Product Description"
-                  component={CustomTextarea}
+                  component={CustomTextArea}
                 />
               </div>
               <div className="d-flex">
@@ -157,7 +157,7 @@ const ProductForm = ({ product, onSubmit, isLoading }) => {
               </div>
               <div className="d-flex">
                 <div className="product-form-field">
-                  <CustomCreatableSelect
+                  <CustomCreateable
                     defaultValue={values.keywords.map((key) => ({
                       value: key,
                       label: key,
@@ -172,7 +172,7 @@ const ProductForm = ({ product, onSubmit, isLoading }) => {
                 </div>
                 &nbsp;
                 <div className="product-form-field">
-                  <CustomCreatableSelect
+                  <CustomCreateable
                     defaultValue={values.keywords.map((key) => ({
                       value: key,
                       label: key,
@@ -191,7 +191,7 @@ const ProductForm = ({ product, onSubmit, isLoading }) => {
                 <FieldArray
                   name="availableColors"
                   disabled={isLoading}
-                  component={CustomColorInput}
+                  component={CustomColor}
                 />
               </div>
               <div className="product-form-field">

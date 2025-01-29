@@ -1,5 +1,5 @@
 import { LoadingOutlined } from "@ant-design/icons";
-import { useDocumentTitle, useProduct, useScrollTop } from "../../../Hooks";
+import { useDocument, useProducts, useScroll } from "../../../Hooks";
 import PropType from "prop-types";
 import React, { lazy, Suspense } from "react";
 import { useDispatch } from "react-redux";
@@ -9,10 +9,10 @@ import { editProduct } from "../../../Redux/Actions/productActions";
 const ProductForm = lazy(() => import("../Components/ProductForm"));
 
 const EditProduct = ({ match }) => {
-  useDocumentTitle("Edit Product | Reactify");
-  useScrollTop();
+  useDocument("Edit Product | Reactify");
+  useScroll();
 
-  const { product, error, isLoading } = useProduct(match.param.id);
+  const { product, error, isLoading } = useProducts(match.param.id);
   const dispatch = useDispatch();
 
   const onSubmitForm = (updates) => {

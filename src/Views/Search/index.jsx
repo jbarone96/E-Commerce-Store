@@ -1,6 +1,6 @@
 import { LoadingOutlined } from "@ant-design/icons";
 import { Boundary, MessageDisplay } from "../../Components/Common";
-import { ProductGrid } from "../../Components/Product/ProductGrid";
+import { ProductGrid } from "../../Components/Product/";
 import { useDidMount } from "../../Hooks";
 import PropType from "prop-types";
 import React, { useEffect } from "react";

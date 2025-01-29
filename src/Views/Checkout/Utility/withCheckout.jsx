@@ -1,5 +1,5 @@
 import { SIGNIN } from "../../../Constants/routes";
-import { calculateTotal } from "../../../Helpers/utility";
+import { calculateCartTotal } from "../../../Helpers/utility";
 import React from "react";
 import { useSelector } from "react-redux";
 import { Redirect, withRouter } from "react-router-dom";
@@ -15,7 +15,7 @@ const withCheckout = (Component) =>
     }));
 
     const shippingFee = state.shipping.isInternational ? 50 : 0;
-    const subtotal = calculateTotal(
+    const subtotal = calculateCartTotal(
       state.cart.map((product) => product.price * product.quantity)
     );
 

@@ -4,9 +4,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 import {
   clearRecentSearch,
-  removeSelected,
+  removedSelectedRecent,
   setTextFilter,
-} from "../../Redux/Actions/miscActions";
+} from "../../Redux/Actions/filterActions";
 
 const ProductSearch = () => {
   const history = useHistory();
@@ -94,7 +94,7 @@ const ProductSearch = () => {
                 </h5>
                 <div
                   className="pill-remove"
-                  onClick={() => dispatch(removeSelected(item))}
+                  onClick={() => dispatch(removedSelectedRecent(item))}
                   role="presentation"
                 >
                   <h5 className="text-subtle margin-0">

@@ -1,24 +1,24 @@
 import { ArrowRightOutlined } from "@ant-design/icons";
 import { MessageDisplay } from "../../Components/Common";
-import { ProductShowcaseGrid } from "../../Components/Product";
+import { ProductShowcase } from "../../Components/Product";
 import {
   FEATURED_PRODUCTS,
   RECOMMENDED_PRODUCTS,
   SHOP,
 } from "../../Constants/routes";
 import {
-  useDocumentTitle,
+  useDocument,
   useFeaturedProducts,
   useRecommendedProducts,
-  useScrollTop,
+  useScroll,
 } from "../../Hooks";
 // import bannerImg from "@/images/bannerImg"
 import React from "react";
 import { Link } from "react-router-dom";
 
 const Home = () => {
-  useDocumentTitle("Reactify | Home");
-  useScrollTop();
+  useDocument("Reactify | Home");
+  useScroll();
 
   const {
     featuredProducts,
@@ -63,10 +63,7 @@ const Home = () => {
                 buttonLabel="Try Again"
               />
             ) : (
-              <ProductShowcaseGrid
-                products={featuredProducts}
-                skeletonCount={6}
-              />
+              <ProductShowcase products={featuredProducts} skeletonCount={6} />
             )}
           </div>
           <div className="display">
@@ -81,7 +78,7 @@ const Home = () => {
                 buttonLabel="Try Again"
               />
             ) : (
-              <ProductShowcaseGrid
+              <ProductShowcase
                 products={recommendedProducts}
                 skeletonCount={6}
               />

@@ -1,7 +1,7 @@
 import { ArrowLeftOutlined, CheckOutlined } from "@ant-design/icons";
 import { CHECKOUT_2 } from "../../../Constants/routes";
 import { useFormikContext } from "formik";
-import { displayMoney } from "../../../Helpers/utility";
+import { displayCurrency } from "../../../Helpers/utility";
 import PropType from "prop-types";
 import React from "react";
 import { useDispatch } from "react-redux";
@@ -25,7 +25,7 @@ const Total = ({ isInternational, subtotal }) => {
       <div className="cart-total text-right">
         <p className="cart-total-title">Total:</p>
         <h2 className="cart-total-amount">
-          {displayMoney(subtotal + (isInternational ? 50 : 0))}
+          {displayCurrency(subtotal + (isInternational ? 50 : 0))}
         </h2>
       </div>
       <br />

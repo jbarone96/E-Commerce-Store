@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 import {
   clearRecentSearch,
-  removeSelectedRecent,
+  removedSelectedRecent,
 } from "../../Redux/Actions/filterActions";
 
 const Search = () => {
@@ -105,7 +105,7 @@ const Search = () => {
                 </h5>
                 <span
                   className="searchbar-recent-button text-subtle"
-                  onClick={() => dispatch(removeSelectedRecent(item))}
+                  onClick={() => dispatch(removedSelectedRecent(item))}
                   role="presentation"
                 >
                   X

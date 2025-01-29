@@ -1,9 +1,9 @@
-import { useScrollTop } from "../../Hooks";
+import { useScroll } from "../../Hooks";
 import PropType from "prop-types";
 import React from "react";
 
 const PageNotFound = ({ history }) => {
-  useScrollTop();
+  useScroll();
 
   return (
     <div className="page-not-found">

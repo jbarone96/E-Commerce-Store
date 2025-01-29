@@ -1,5 +1,5 @@
 export { default as Filters } from "./ProductFilters";
-export { default as Featured } from "./ProductFeatured";
+export { default as ProductFeatured } from "./ProductFeatured";
 export { default as ProductGrid } from "./ProductGrid";
 export { default as ProductItem } from "./ProductItem";
 export { default as ProductList } from "./ProductList";

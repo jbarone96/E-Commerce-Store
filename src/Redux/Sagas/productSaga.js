@@ -7,7 +7,7 @@ import {
   SEARCH_PRODUCT,
 } from "../../Constants/constants";
 import { ADMIN_PRODUCTS } from "../../Constants/routes";
-import { displayActionMessage } from "../../Helpers/utility";
+import { displayToast } from "../../Helpers/utility";
 import { all, call, put, select } from "redux-saga/effects";
 import { setLoading, setRequestStatus } from "../Actions/miscActions";
 import { history } from "../../Routers/appRouter";
@@ -19,7 +19,7 @@ import {
   getProductsSuccess,
   removeProductSuccess,
   searchProductSuccess,
-} from "../actions/productActions";
+} from "../Actions/productActions";
 
 function* initRequest() {
   yield put(setLoading(true));
@@ -34,7 +34,7 @@ function* handleError(e) {
 
 function* handleAction(location, message, status) {
   if (location) yield call(history.push, location);
-  yield call(displayActionMessage, message, status);
+  yield call(displayToast, message, status);
 }
 
 function* productSaga({ type, payload }) {

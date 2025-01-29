@@ -1,4 +1,4 @@
-import { FeaturedProduct } from "../../Components/Product";
+import { ProductFeatured } from "../../Components/Product";
 import PropType from "prop-types";
 import React from "react";
 
@@ -8,13 +8,13 @@ const ProductShowcase = ({ products, skeletonCount }) => (
       ? new Array(skeletonCount)
           .fill({})
           .map((product, idx) => (
-            <FeaturedProduct
+            <ProductFeatured
               key={`product-skeleton ${idx}`}
               product={product}
             />
           ))
       : products.map((product) => (
-          <FeaturedProduct key={product.id} product={product} />
+          <ProductFeatured key={product.id} product={product} />
         ))}
   </div>
 );

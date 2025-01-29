@@ -1,6 +1,6 @@
 import { CartItem, CartToggle } from "../Cart";
 import { Boundary, Modal } from "../Common";
-import { CHECKOUT_STEP_1 } from "../../Constants/routes";
+import { CHECKOUT_1 } from "../../Constants/routes";
 import firebase from "firebase/compat/app";
 import { calculateCartTotal, displayCurrency } from "../../Helpers/utility";
 import { useDidMount, useModal } from "../../Hooks";
@@ -34,7 +34,7 @@ const Cart = () => {
   const onCheckout = () => {
     if (cart.length !== 0 && user) {
       document.body.classList.remove("is-cart-open");
-      history.push(CHECKOUT_STEP_1);
+      history.push(CHECKOUT_1);
     } else {
       onOpenModal();
     }
@@ -43,7 +43,7 @@ const Cart = () => {
   const onSignIn = () => {
     onCloseModal();
     document.body.classList.remove("basket-open");
-    history.push(CHECKOUT_STEP_1);
+    history.push(CHECKOUT_1);
   };
 
   const onClearCart = () => {

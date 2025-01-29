@@ -1,16 +1,12 @@
-import {
-  AppliedFilters,
-  ProductGrid,
-  ProductList,
-} from "../../Components/Product";
-import { useDocumentTitle, useScrollTop } from "../../Hooks";
+import { Filters, ProductGrid, ProductList } from "../../Components/Product";
+import { useDocument, useScroll } from "../../Hooks";
 import React from "react";
 import { shallowEqual, useSelector } from "react-redux";
 import { selectFilter } from "../../Selectors/selector";
 
 const Shop = () => {
-  useDocumentTitle("Shop | Reactify");
-  useScrollTop();
+  useDocument("Shop | Reactify");
+  useScroll();
 
   const store = useSelector(
     (state) => ({
@@ -25,7 +21,7 @@ const Shop = () => {
   return (
     <main className="content">
       <section className="product-list-wrapper">
-        <AppliedFilters filteredProductsCount={store.filteredProducts.length} />
+        <Filters filteredProductsCount={store.filteredProducts.length} />
         <ProductList {...store}>
           <ProductGrid products={store.filteredProducts} />
         </ProductList>

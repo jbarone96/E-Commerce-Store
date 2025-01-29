@@ -1,6 +1,6 @@
 import { Boundary } from "../../../Components/Common";
-import { AppliedFilters, ProductList } from "../../../Components/Product";
-import { useDocumentTitle, useScrollTop } from "../../../Hooks";
+import { Filters, ProductList } from "../../../Components/Product";
+import { useDocument, useScroll } from "../../../Hooks";
 import React from "react";
 import { useSelector } from "react-redux";
 import { withRouter } from "react-router-dom";
@@ -9,8 +9,8 @@ import { ProductsNavbar } from "../Components";
 import ProductsTable from "../Components/ProductsTable";
 
 const Products = () => {
-  useDocumentTitle("Product List | Reactify");
-  useScrollTop();
+  useDocument("Product List | Reactify");
+  useScroll();
 
   const store = useSelector((state) => ({
     filteredProducts: selectFilter(state.products.items, state.filter),

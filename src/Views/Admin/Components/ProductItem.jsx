@@ -1,9 +1,9 @@
 import { ImageLoader } from "../../../Components/Common";
 import { EDIT_PRODUCT } from "../../../Constants/routes";
 import {
-  displayActionMessage,
+  displayToast,
   displayDate,
-  displayMoney,
+  displayCurrency,
 } from "../../../Helpers/utility";
 import PropType from "prop-types";
 import React, { useRef } from "react";
@@ -27,7 +27,7 @@ const ProductItem = ({ product }) => {
 
   const onConfirmDelete = () => {
     dispatch(removeProduct(product.id));
-    displayActionMessage("Item successfully deleted");
+    displayToast("Item successfully deleted");
     productRef.current.classList.remove("item-active");
   };
 
@@ -64,7 +64,7 @@ const ProductItem = ({ product }) => {
           <div className="grid-col">
             <span>
               {product.price ? (
-                displayMoney(product.price)
+                displayCurrency(product.price)
               ) : (
                 <Skeleton width={30} />
               )}

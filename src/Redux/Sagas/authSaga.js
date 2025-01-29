@@ -15,7 +15,7 @@ import { SIGNIN as ROUTE_SIGNIN } from "../../Constants/routes";
 //   import defaultBanner from '@/images/defaultBanner.jpg';
 import { call, put } from "redux-saga/effects";
 import { signInSuccess, signOutSuccess } from "../Actions/authActions";
-import { clearBasket, setBasketItems } from "../Actions/cartActions";
+import { clearCart, setCartItems } from "../Actions/cartActions";
 import { resetCheckout } from "../Actions/checkoutActions";
 import { resetFilter } from "../Actions/filterActions";
 import { setAuthenticating, setAuthStatus } from "../Actions/miscActions";
@@ -126,7 +126,7 @@ function* authSaga({ type, payload }) {
           banner: defaultBanner,
           email: payload.email,
           address: "",
-          basket: [],
+          cart: [],
           mobile: { data: {} },
           role: "USER",
           dateJoined: ref.user.metadata.creationTime || new Date().getTime(),
@@ -143,7 +143,7 @@ function* authSaga({ type, payload }) {
       try {
         yield initRequest();
         yield call(firebase.signOut);
-        yield put(clearBasket());
+        yield put(clearCart());
         yield put(clearProfile());
         yield put(resetFilter());
         yield put(resetCheckout());
@@ -181,8 +181,8 @@ function* authSaga({ type, payload }) {
         const user = snapshot.data();
 
         yield put(setProfile(user));
-        yield put(setBasketItems(user.basket));
-        yield put(setBasketItems(user.basket));
+        yield put(setCartItems(user.cart));
+        yield put(setCartItems(user.cart));
         yield put(
           signInSuccess({
             id: payload.uid,
@@ -201,7 +201,7 @@ function* authSaga({ type, payload }) {
           banner: defaultBanner,
           email: payload.email,
           address: "",
-          basket: [],
+          cart: [],
           mobile: { data: {} },
           role: "USER",
           dateJoined: payload.metadata.creationTime,

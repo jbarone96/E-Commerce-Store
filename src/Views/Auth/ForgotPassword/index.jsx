@@ -1,5 +1,5 @@
 import { CheckOutlined, LoadingOutlined } from "@ant-design/icons";
-import { useDidMount, useDocumentTitle, useScrollTop } from "../../../Hooks";
+import { useDidMount, useDocument, useScroll } from "../../../Hooks";
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { resetPassword } from "../../../Redux/Actions/authActions";
@@ -16,8 +16,8 @@ const ForgotPassword = () => {
     useState(false);
   const [field, setField] = useState({});
 
-  useScrollTop();
-  useDocumentTitle("Forgot Password | Reactify");
+  useScroll();
+  useDocument("Forgot Password | Reactify");
   useEffect(() => {
     if (didMount) {
       setForgotPwStatus(authStatus);

@@ -1,5 +1,5 @@
 import { LoadingOutlined } from "@ant-design/icons";
-import { useDocumentTitle, useScrollTop } from "../../../Hooks";
+import { useDocument, useScroll } from "../../../Hooks";
 import React, { lazy, Suspense } from "react";
 import User from "../Components/User";
 
@@ -15,8 +15,8 @@ const Loader = () => (
 );
 
 const UserAcc = () => {
-  useScrollTop();
-  useDocumentTitle("My Account | Reactify");
+  useScroll();
+  useDocument("My Account | Reactify");
 
   return (
     <User>

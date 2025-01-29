@@ -1,9 +1,9 @@
-import { useDocumentTitle, useScrollTop } from "../../../Hooks";
+import { useDocument, useScroll } from "../../../Hooks";
 import React from "react";
 
 const Dashboard = () => {
-  useDocumentTitle("Welcome | Reactify");
-  useScrollTop();
+  useDocument("Welcome | Reactify");
+  useScroll();
 
   return (
     <div className="loader">

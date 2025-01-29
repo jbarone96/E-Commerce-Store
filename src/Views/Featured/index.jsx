@@ -1,16 +1,12 @@
 import { MessageDisplay } from "../../Components/Common";
-import { ProductShowcaseGrid } from "../../Components/Product";
-import {
-  useDocumentTitle,
-  useScrollTop,
-  useFeaturedProducts,
-} from "../../Hooks";
+import { ProductShowcase } from "../../Components/Product";
+import { useDocument, useScroll, useFeaturedProducts } from "../../Hooks";
 // import bannerImg from "@/images/bannerImg.png"
 import React from "react";
 
 const FeaturedProducts = () => {
-  useDocumentTitle("Featured Product | Reactify");
-  useScrollTop();
+  useDocument("Featured Product | Reactify");
+  useScroll();
 
   const { featuredProducts, fetchFeaturedProducts, isLoading, error } =
     useFeaturedProducts();
@@ -35,10 +31,7 @@ const FeaturedProducts = () => {
                 buttonLabel="Try Again"
               />
             ) : (
-              <ProductShowcaseGrid
-                products={featuredProducts}
-                skeletonCount={6}
-              />
+              <ProductShowcase products={featuredProducts} skeletonCount={6} />
             )}
           </div>
         </div>

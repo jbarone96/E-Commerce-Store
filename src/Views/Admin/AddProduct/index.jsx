@@ -1,5 +1,5 @@
 import { LoadingOutlined } from "@ant-design/icons";
-import { useDocumentTitle, useScrollTop } from "../../../Hooks";
+import { useDocument, useScroll } from "../../../Hooks";
 import React, { lazy, Suspense } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { withRouter } from "react-router-dom";
@@ -8,8 +8,8 @@ import { addProduct } from "../../../Redux/Actions/productActions";
 const ProductForm = lazy(() => import("../Components/ProductForm"));
 
 const AddProduct = () => {
-  useScrollTop();
-  useDocumentTitle("Add New Product | Reactify");
+  useScroll();
+  useDocument("Add New Product | Reactify");
 
   const isLoading = useSelector((state) => state.app.isLoading);
   const dispatch = useDispatch();

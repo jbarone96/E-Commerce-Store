@@ -4,15 +4,15 @@ import {
   ImageLoader,
   MessageDisplay,
 } from "../../Components/Common";
-import { ProductShowcaseGrid } from "../../Components/Product";
+import { ProductShowcase } from "../../Components/Product";
 import { RECOMMENDED_PRODUCTS, SHOP } from "../../Constants/routes";
-import { displayMoney } from "../../Helpers/utility";
+import { displayCurrency } from "../../Helpers/utility";
 import {
   useCart,
-  useDocumentTitle,
-  useProduct,
+  useDocument,
+  useProducts,
   useRecommendedProducts,
-  useScrollTop,
+  useScroll,
 } from "../../Hooks";
 import React, { useEffect, useRef, useState } from "react";
 import { Link, useParams } from "react-router-dom";
@@ -20,10 +20,10 @@ import Select from "react-select/base";
 
 const ViewProduct = () => {
   const { id } = useParams();
-  const { product, isLoading, error } = useProduct(id);
+  const { product, isLoading, error } = useProducts(id);
   const { addToCart, isItemInCart } = useCart(id);
-  useScrollTop();
-  useDocumentTitle(`View ${product?.name || "Item"}`);
+  useScroll();
+  useDocument(`View ${product?.name || "Item"}`);
 
   const [selectedImage, setSelectedImage] = useState(product?.image || "");
   const [selectedSize, setSelectedSize] = useState("");
@@ -145,7 +145,7 @@ const ViewProduct = () => {
                   />
                 </div>
               )}
-              <h1>{displayMoney(product.price)}</h1>
+              <h1>{displayCurrency(product.price)}</h1>
               <div className="product-modal-action">
                 <button
                   className={`button button-small ${
@@ -175,7 +175,7 @@ const ViewProduct = () => {
                 buttonLabel="Try Again"
               />
             ) : (
-              <ProductShowcaseGrid
+              <ProductShowcase
                 products={recommendedProducts}
                 skeletonCount={3}
               />

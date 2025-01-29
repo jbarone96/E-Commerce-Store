@@ -2,12 +2,12 @@ import { ArrowLeftOutlined, ArrowRightOutlined } from "@ant-design/icons";
 import { Boundary } from "../../../Components/Common";
 import { CHECKOUT_1, CHECKOUT_3 } from "../../../Constants/routes";
 import { Form, Formik } from "formik";
-import { useDocumentTitle, useScrollTop } from "../../../Hooks";
+import { useDocument, useScroll } from "../../../Hooks";
 import PropType from "prop-types";
 import React from "react";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
-import { setShippingDetails } from "../../../Redux/Actions/cartActions";
+import { setShippingDetails } from "../../../Redux/Actions/checkoutActions";
 import * as Yup from "yup";
 import { StepTracker } from "../Components";
 import withCheckout from "../Utility/withCheckout";
@@ -36,8 +36,8 @@ const FormSchema = Yup.object().shape({
 });
 
 const ShippingDetails = ({ profile, shipping, subtotal }) => {
-  useDocumentTitle("Checkout Step 2 | Reactify");
-  useScrollTop();
+  useDocument("Checkout Step 2 | Reactify");
+  useScroll();
   const dispatch = useDispatch();
   const history = useHistory();
 

@@ -1,7 +1,7 @@
 import { CHECKOUT_1 } from "../../../Constants/routes";
 import { Form, Formik, isInteger } from "formik";
-import { displayActionMessage } from "../../../Helpers/utility";
-import { useDocumentTitle, useScrollTop } from "../../../Hooks";
+import { displayToast } from "../../../Helpers/utility";
+import { useDocument, useScroll } from "../../../Hooks";
 import PropType from "prop-types";
 import React from "react";
 import { Redirect } from "react-router-dom";
@@ -30,8 +30,8 @@ const FormSchema = Yup.object().shape({
 });
 
 const Payment = ({ shipping, payment, subtotal }) => {
-  useDocumentTitle("Checkout Step 3 | Reactify");
-  useScrollTop();
+  useDocument("Checkout Step 3 | Reactify");
+  useScroll();
 
   const initFormikValues = {
     name: payment.name || "",
@@ -42,7 +42,7 @@ const Payment = ({ shipping, payment, subtotal }) => {
   };
 
   const onConfirm = () => {
-    displayActionMessage("Feature not ready yet ☺", "info");
+    displayToast("Feature not ready yet ☺", "info");
   };
 
   if (!shipping || !shipping.isDone) {
@@ -58,7 +58,7 @@ const Payment = ({ shipping, payment, subtotal }) => {
         validationSchema={FormSchema}
         validate={(form) => {
           if (form.type === "paypal") {
-            displayActionMessage("Feature not ready yet ☺", "info");
+            displayToast("Feature not ready yet ☺", "info");
           }
         }}
         onSubmit={onConfirm}

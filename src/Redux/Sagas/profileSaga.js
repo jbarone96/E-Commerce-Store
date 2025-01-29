@@ -1,11 +1,11 @@
 import { UPDATE_EMAIL, UPDATE_PROFILE } from "../../Constants/constants";
 import { ACCOUNT } from "../../Constants/routes";
-import { displayActionMessage } from "../../Helpers/utility";
+import { displayToast } from "../../Helpers/utility";
 import { call, put, select } from "redux-saga/effects";
 import { history } from "../../Routers/appRouter";
 import firebase from "../../Services/firebase";
-import { setLoading } from "../actions/miscActions";
-import { updateProfileSuccess } from "../actions/profileActions";
+import { setLoading } from "../Actions/miscActions";
+import { updateProfileSuccess } from "../Actions/profileActions";
 
 function* profileSaga({ type, payload }) {
   switch (type) {
@@ -16,11 +16,7 @@ function* profileSaga({ type, payload }) {
 
         yield put(setLoading(false));
         yield call(history.push, "/profile");
-        yield call(
-          displayActionMessage,
-          "Email Updated Successfully!",
-          "success"
-        );
+        yield call(displayToast, "Email Updated Successfully!", "success");
       } catch (e) {
         console.log(e.message);
       }
@@ -72,23 +68,19 @@ function* profileSaga({ type, payload }) {
 
         yield put(setLoading(false));
         yield call(history.push, ACCOUNT);
-        yield call(
-          displayActionMessage,
-          "Profile Updated Successfully!",
-          "success"
-        );
+        yield call(displayToast, "Profile Updated Successfully!", "success");
       } catch (e) {
         console.log(e);
         yield put(setLoading(false));
         if (e.code === "auth/wrong-password") {
           yield call(
-            displayActionMessage,
+            displayToast,
             "Wrong password, profile update failed :(",
             "error"
           );
         } else {
           yield call(
-            displayActionMessage,
+            displayToast,
             `:( Failed to update profile. ${e.message ? e.message : ""}`,
             "error"
           );

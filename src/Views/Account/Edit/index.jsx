@@ -1,11 +1,11 @@
 import { EditOutlined, LoadingOutlined } from "@ant-design/icons";
-import { Boundary, ImageLoading } from "../../../Components/Common";
+import { Boundary, ImageLoader } from "../../../Components/Common";
 import { Formik } from "formik";
 import {
-  useDocumentTitle,
+  useDocument,
   useFileHandler,
   useModal,
-  useScrollTop,
+  useScroll,
 } from "../../../Hooks";
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -36,8 +36,8 @@ const FormSchema = Yup.object().shape({
 });
 
 const EditProfile = () => {
-  useDocumentTitle("Edit Account | Reactify");
-  useScrollTop();
+  useDocument("Edit Account | Reactify");
+  useScroll();
 
   const modal = useModal();
   const dispatch = useDispatch();
