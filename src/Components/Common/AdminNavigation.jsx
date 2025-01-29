@@ -1,9 +1,9 @@
-import { ADMIN_DASHBOARD } from "@/constants/routes";
+import { ADMIN_DASHBOARD } from "../../Constants/routes";
 // import logo from ""
 import React from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import UserAvatar from "@/views/account/components/UserAvatar";
+import UserAvatar from "../../Views/Account/Components/UserAvatar";
 
 const AdminNavigation = () => {
   const { isAuthenticating, profile } = useSelector((state) => ({

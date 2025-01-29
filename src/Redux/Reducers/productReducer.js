@@ -5,7 +5,7 @@ import {
   GET_PRODUCTS_SUCCESS,
   REMOVE_PRODUCT_SUCCESS,
   SEARCH_PRODUCT_SUCCESS,
-} from "@/constats/constats";
+} from "../../Constants/constants";
 
 const initState = {
   lastRefKey: null,

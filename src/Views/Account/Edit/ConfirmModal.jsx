@@ -1,5 +1,5 @@
 import { CheckOutlined, CloseOutlined } from "@ant-design/icons";
-import { Modal } from "@/components/common";
+import { Modal } from "../../../Components/Common";
 import { useFormikContext } from "formik";
 import PropType from "prop-types";
 import React, { useState } from "react";

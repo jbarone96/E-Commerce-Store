@@ -11,7 +11,7 @@ import {
   REMOVE_PRODUCT_SUCCESS,
   SEARCH_PRODUCT,
   SEARCH_PRODUCT_SUCCESS,
-} from "@/constants/constants";
+} from "../../Constants/constants";
 
 export const getProducts = (products) => ({
   type: GET_PRODUCT,

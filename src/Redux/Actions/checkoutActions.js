@@ -2,7 +2,7 @@ import {
   RESET_CHECKOUT,
   SET_CHECKOUT_PAYMENT_DETAILS,
   SET_CHECKOUT_SHIPPING_DETAILS,
-} from "@/constants/constants";
+} from "../../Constants/constants";
 
 export const setShippingDetails = (details) => ({
   type: SET_CHECKOUT_SHIPPING_DETAILS,

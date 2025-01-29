@@ -5,7 +5,7 @@ import { useDispatch } from "react-redux";
 import {
   addQuantityItem,
   removeQuantityItem,
-} from "@/redux/actions/cartActions";
+} from "../../Redux/Actions/cartActions";
 
 const CartItemControl = ({ product }) => {
   const dispatch = useDispatch();

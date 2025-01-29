@@ -3,7 +3,7 @@ import {
   LOADING,
   SET_AUTH_STATUS,
   SET_REQUEST_STATUS,
-} from "@/constants/constants";
+} from "../../Constants/constants";
 
 export const setLoading = (bool = true) => ({
   type: LOADING,

@@ -1,4 +1,4 @@
-import { AdminNavigation, AdminSideBar } from "@/components/common";
+import { AdminNavigation, AdminSideBar } from "../Components/Common";
 import PropType from "prop-types";
 import React from "react";
 import { connect } from "react-redux";

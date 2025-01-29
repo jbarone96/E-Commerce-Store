@@ -3,8 +3,8 @@ import {
   CheckOutlined,
   LoadingOutlined,
 } from "@ant-design/icons";
-import { CustomInput, CustomMobileInput } from "@/components/formik";
-import { ACCOUNT } from "@/constants/routes";
+import { CustomInput, CustomMobileInput } from "../../../Components/Custom";
+import { ACCOUNT } from "../../../Constants/routes";
 import { Field, useFormikContext } from "formik";
 import PropType from "prop-types";
 import React from "react";

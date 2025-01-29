@@ -5,7 +5,7 @@ import {
   MINUS_QTY_ITEM,
   REMOVE_FROM_CART,
   SET_CART_ITEMS,
-} from "@/constants/constants";
+} from "../../Constants/constants";
 
 export const setCartItems = (items = []) => ({
   type: SET_CART_ITEMS,

@@ -7,7 +7,7 @@ import {
   SET_MAX_PRICE_FILTER,
   SET_MIN_PRICE_FILTER,
   SET_TEXT_FILTER,
-} from "@/constants/constants";
+} from "../../Constants/constants";
 
 export const setTextFilter = (keyword) => ({
   type: SET_TEXT_FILTER,

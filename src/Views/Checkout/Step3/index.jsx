@@ -1,7 +1,7 @@
-import { CHECKOUT_1 } from "@/constants/routes";
+import { CHECKOUT_1 } from "../../../Constants/routes";
 import { Form, Formik, isInteger } from "formik";
-import { displayActionMessage } from "@/helpers/utility";
-import { useDocumentTitle, useScrollTop } from "@/hooks";
+import { displayActionMessage } from "../../../Helpers/utility";
+import { useDocumentTitle, useScrollTop } from "../../../Hooks";
 import PropType from "prop-types";
 import React from "react";
 import { Redirect } from "react-router-dom";

@@ -1,5 +1,5 @@
 import { useFormikContext } from "formik";
-import { displayMoney } from "@/helpers/utility";
+import { displayCurrency } from "../../../Helpers/utility";
 import PropType from "prop-types";
 import React from "react";
 
@@ -30,7 +30,7 @@ const ShippingTotal = ({ subtotal }) => {
             </td>
             <td>
               <h4 className="cart-total-amount text-subtle text-right margin-0">
-                {displayMoney(subtotal)}
+                {displayCurrency(subtotal)}
               </h4>
             </td>
           </tr>
@@ -42,7 +42,7 @@ const ShippingTotal = ({ subtotal }) => {
             </td>
             <td>
               <h2 className="cart-total-amount text-right">
-                {displayMoney(
+                {displayCurrency(
                   Number(subtotal) + (values.isInternational ? 50 : 0)
                 )}
               </h2>

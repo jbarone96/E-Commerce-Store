@@ -1,9 +1,9 @@
-import { PreLoader } from "@/components/common";
+import { PreLoader } from "./Components/Common/Preloader";
 import PropType from "prop-types";
 import React, { StrictMode } from "react";
 import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
-import AppRouter from "@/routers/AppRouter";
+import AppRouter from "./Routers/appRouter";
 
 const App = ({ store, persistor }) => (
   <StrictMode>

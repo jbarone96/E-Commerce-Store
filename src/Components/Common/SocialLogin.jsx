@@ -10,7 +10,7 @@ import {
   signInWithFacebook,
   signInWithGithub,
   signInWithGoogle,
-} from "@/redux/actions/authActions";
+} from "../../Redux/Actions/authActions";
 
 const SocialLogin = ({ isLoading }) => {
   const dispatch = useDispatch();

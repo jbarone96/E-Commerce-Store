@@ -1,4 +1,4 @@
-import { SIGNIN_SUCCESS, SIGNOUT_SUCCESS } from "@/constants/constants";
+import { SIGNIN_SUCCESS, SIGNOUT_SUCCESS } from "../../Constants/constants";
 
 const initState = null;
 

@@ -1,4 +1,4 @@
-import { ADMIN_DASHBOARD, SIGNIN, SIGNUP } from "@/constants/routes";
+import { ADMIN_DASHBOARD, SIGNIN, SIGNUP } from "../Constants/routes";
 import PropType from "prop-types";
 import React from "react";
 import { connect } from "react-redux";

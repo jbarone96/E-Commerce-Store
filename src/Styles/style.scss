@@ -4,17 +4,17 @@
 // ---------------------------
 // 01 - SETTINGS
 
-@import "./1 - settings/breakpoints";
-@import "./1 - settings/colors";
-@import "./1 - settings/sizes";
-@import "./1 - settings/typography";
-@import "./1 - settings/zindex";
+@import "./Settings/breakpoints";
+@import "./Settings/colors";
+@import "./Settings/sizes";
+@import "./Settings/typography";
+@import "./Settings/zindex";
 
 // ---------------------------
 // 02 - TOOLS
 
-@import "./2 - tools/functions";
-@import "./2 - tools/mixins";
+@import "./Tools/functions";
+@import "./Tools/mixins";
 
 // ---------------------------
 // 03 - GENERIC
@@ -22,63 +22,63 @@
 // ---------------------------
 // 04 - ELEMENTS
 
-@import "./4 - elements/base";
-@import "./4 - elements/button";
-@import "./4 - elements/input";
-@import "./4 - elements/link";
-@import "./4 - elements/select";
-@import "./4 - elements/textarea";
-@import "./4 - elements/label";
+@import "./Elements/base";
+@import "./Elements/button";
+@import "./Elements/input";
+@import "./Elements/link";
+@import "./Elements/select";
+@import "./Elements/textarea";
+@import "./Elements/label";
 
 // ---------------------------
 // 05 - COMPONENTS
 
-@import "./5 - components/icons";
-@import "./5 - components/navigation";
-@import "./5 - components/product";
-@import "./5 - components/cart";
-@import "./5 - components/side_bar";
-@import "./5 - components/search_bar";
-@import "./5 - components/badge";
-@import "./5 - components/footer";
-@import "./5 - components/filter";
-@import "./5 - components/price_range";
-@import "./5 - components/modal";
-@import "./5 - components/auth";
-@import "./5 - components/banner";
-@import "./5 - components/toast";
-@import "./5 - components/home";
-@import "./5 - components/progress";
-@import "./5 - components/preloader";
-@import "./5 - components/pill";
-@import "./5 - components/tool_tip";
-@import "./5 - components/color_picker";
+@import "./Components/icons";
+@import "./Components/navigation";
+@import "./Components/product";
+@import "./Components/cart";
+@import "./Components/side_bar";
+@import "./Components/search_bar";
+@import "./Components/badge";
+@import "./Components/footer";
+@import "./Components/filter";
+@import "./Components/price_range";
+@import "./Components/modal";
+@import "./Components/auth";
+@import "./Components/banner";
+@import "./Components/toast";
+@import "./Components/home";
+@import "./Components/progress";
+@import "./Components/preloader";
+@import "./Components/pill";
+@import "./Components/tool_tip";
+@import "./Components/color_picker";
 
 // -- Admin components
-@import "./5 - components/admin/grid";
-@import "./5 - components/admin/product";
-@import "./5 - components/side_nav";
+@import "./Components/Admin/grid";
+@import "./Components/Admin/product";
+@import "./Components/side_nav";
 // @import './5 - components/admin/user';
 
 // -- Mobile components
 // @import './5 - components/mobile/bottom-navigation';
-@import "./5 - components/mobile/mobile_nav";
+@import "./Components/Mobile/mobile_nav";
 
 // -- Profile components
-@import "./5 - components/profile/user_nav";
-@import "./5 - components/profile/user_profile";
-@import "./5 - components/profile/user_tab";
-@import "./5 - components/profile/edit";
+@import "./Components/Profile/user_nav";
+@import "./Components/Profile/user_profile";
+@import "./Components/Profile/user_tab";
+@import "./Components/Profile/edit";
 
 // -- Checkout components
-@import "./5 - components/checkout/checkout";
+@import "./Components/Checkout/checkout";
 
 // -- 404
-@import "./5 - components/404/page_not_found";
+@import "./Components/404/page_not_found";
 
 // ---------------------------
 // 06 - UTILS
 
-@import "./6 - utils/state";
-@import "./6 - utils/animation";
-@import "./6 - utils/utils";
+@import "./Utilities/state";
+@import "./Utilities/animation";
+@import "./Utilities/utils";

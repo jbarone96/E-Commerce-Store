@@ -1,17 +1,17 @@
 import { ArrowRightOutlined } from "@ant-design/icons";
-import { MessageDisplay } from "@/components/common";
-import { ProductShowcaseGrid } from "@/components/product";
+import { MessageDisplay } from "../../Components/Common";
+import { ProductShowcaseGrid } from "../../Components/Product";
 import {
   FEATURED_PRODUCTS,
   RECOMMENDED_PRODUCTS,
   SHOP,
-} from "@/constants/routes";
+} from "../../Constants/routes";
 import {
   useDocumentTitle,
   useFeaturedProducts,
   useRecommendedProducts,
   useScrollTop,
-} from "@/hooks";
+} from "../../Hooks";
 // import bannerImg from "@/images/bannerImg"
 import React from "react";
 import { Link } from "react-router-dom";

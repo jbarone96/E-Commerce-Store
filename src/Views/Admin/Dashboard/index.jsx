@@ -1,4 +1,4 @@
-import { useDocumentTitle, useScrollTop } from "@/hooks";
+import { useDocumentTitle, useScrollTop } from "../../../Hooks";
 import React from "react";
 
 const Dashboard = () => {

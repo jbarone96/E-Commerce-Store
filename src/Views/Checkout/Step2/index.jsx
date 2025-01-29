@@ -1,13 +1,13 @@
 import { ArrowLeftOutlined, ArrowRightOutlined } from "@ant-design/icons";
-import { Boundary } from "@/components/common";
-import { CHECKOUT_1, CHECKOUT_3 } from "@/constants/routes";
+import { Boundary } from "../../../Components/Common";
+import { CHECKOUT_1, CHECKOUT_3 } from "../../../Constants/routes";
 import { Form, Formik } from "formik";
-import { useDocumentTitle, useScrollTop } from "@/hooks";
+import { useDocumentTitle, useScrollTop } from "../../../Hooks";
 import PropType from "prop-types";
 import React from "react";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
-import { setShippingDetails } from "@/redux/actions/checkoutActions";
+import { setShippingDetails } from "../../../Redux/Actions/cartActions";
 import * as Yup from "yup";
 import { StepTracker } from "../Components";
 import withCheckout from "../Utility/withCheckout";

@@ -1,14 +1,14 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import { CheckOutlined, LoadingOutlined } from "@ant-design/icons";
-import { ImageLoader } from "@/components/common";
+import { ImageLoader } from "../../../Components/Common";
 import {
   CustomColorInput,
   CustomCreatableSelect,
   CustomInput,
   CustomTextarea,
-} from "@/components/formik";
+} from "../../../Components/Custom";
 import { Field, FieldArray, Form, Formik } from "formik";
-import { useFileHandler } from "@/hooks";
+import { useFileHandler } from "../../../Hooks";
 import PropType from "prop-types";
 import React from "react";
 import * as Yup from "yup";

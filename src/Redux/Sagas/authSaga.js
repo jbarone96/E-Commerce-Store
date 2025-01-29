@@ -9,19 +9,19 @@ import {
   SIGNIN_WITH_GOOGLE,
   SIGNOUT,
   SIGNUP,
-} from "@/constants/constants";
-import { SIGNIN as ROUTE_SIGNIN } from "@/constants/routes";
+} from "../../Constants/constants";
+import { SIGNIN as ROUTE_SIGNIN } from "../../Constants/routes";
 //   import defaultAvatar from '@/images/defaultAvatar.jpg';
 //   import defaultBanner from '@/images/defaultBanner.jpg';
 import { call, put } from "redux-saga/effects";
-import { signInSuccess, signOutSuccess } from "@/redux/actions/authActions";
-import { clearBasket, setBasketItems } from "@/redux/actions/basketActions";
-import { resetCheckout } from "@/redux/actions/checkoutActions";
-import { resetFilter } from "@/redux/actions/filterActions";
-import { setAuthenticating, setAuthStatus } from "@/redux/actions/miscActions";
-import { clearProfile, setProfile } from "@/redux/actions/profileActions";
-import { history } from "@/routers/AppRouter";
-import firebase from "@/services/firebase";
+import { signInSuccess, signOutSuccess } from "../Actions/authActions";
+import { clearBasket, setBasketItems } from "../Actions/cartActions";
+import { resetCheckout } from "../Actions/checkoutActions";
+import { resetFilter } from "../Actions/filterActions";
+import { setAuthenticating, setAuthStatus } from "../Actions/miscActions";
+import { clearProfile, setProfile } from "../Actions/profileActions";
+import { history } from "../../Routers/appRouter";
+import firebase from "../../Services/firebase";
 
 function* handleError(e) {
   const obj = { success: false, type: "auth", isError: true };

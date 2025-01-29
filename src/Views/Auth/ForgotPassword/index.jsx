@@ -1,8 +1,8 @@
 import { CheckOutlined, LoadingOutlined } from "@ant-design/icons";
-import { useDidMount, useDocumentTitle, useScrollTop } from "@/hooks";
+import { useDidMount, useDocumentTitle, useScrollTop } from "../../../Hooks";
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { resetPassword } from "@/redux/actions/authActions";
+import { resetPassword } from "../../../Redux/Actions/authActions";
 
 const ForgotPassword = () => {
   const { authStatus, isAuthenticating } = useSelector((state) => ({

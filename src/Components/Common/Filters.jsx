@@ -1,10 +1,10 @@
-import { useDidMount } from "@/hooks";
+import { useDidMount } from "../../Hooks";
 import PropType from "prop-types";
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory, withRouter } from "react-router-dom";
-import { applyFilter, resetFilter } from "@/redux/actions/filterActions";
-import { selectMax, selectMin } from "@/selectors/selector";
+import { applyFilter, resetFilter } from "../../Redux/Actions/filterActions";
+import { selectMax, selectMin } from "../../Selectors/selector";
 import PriceRange from "./Price";
 
 const Filters = ({ closeModal }) => {

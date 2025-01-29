@@ -1,13 +1,13 @@
-import { CartItem, CartToggle } from "@/components/cart";
-import { Boundary, Modal } from "@/components/common";
-import { CHECKOUT_STEP_1 } from "@/constants/routes";
-import firebase from "firebase/firebase";
+import { CartItem, CartToggle } from "../Cart";
+import { Boundary, Modal } from "../Common";
+import { CHECKOUT_STEP_1 } from "../../Constants/routes";
+import firebase from "firebase/compat/app";
 import { calculateCartTotal, displayCurrency } from "../../Helpers/utility";
-import { useDidMount, useModal } from "@/hooks";
+import { useDidMount, useModal } from "../../Hooks";
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory, useLocation } from "react-router-dom";
-import { clearCart } from "@/redux/actions/cartActions";
+import { clearCart } from "../../Redux/Actions/cartActions";
 
 const Cart = () => {
   const { isOpenModal, onOpenModal, onCloseModal } = useModal();

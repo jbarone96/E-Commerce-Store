@@ -1,6 +1,10 @@
-import { MessageDisplay } from "@/components/common";
-import { ProductShowcaseGrid } from "@/components/product";
-import { useDocumentTitle, useScrollTop, useFeaturedProducts } from "@/hooks";
+import { MessageDisplay } from "../../Components/Common";
+import { ProductShowcaseGrid } from "../../Components/Product";
+import {
+  useDocumentTitle,
+  useScrollTop,
+  useFeaturedProducts,
+} from "../../Hooks";
 // import bannerImg from "@/images/bannerImg.png"
 import React from "react";
 

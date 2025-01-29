@@ -1,5 +1,5 @@
 import { LoadingOutlined } from "@ant-design/icons";
-import { useDocumentTitle, useScrollTop } from "@/hooks";
+import { useDocumentTitle, useScrollTop } from "../../../Hooks";
 import React, { lazy, Suspense } from "react";
 import User from "../Components/User";
 

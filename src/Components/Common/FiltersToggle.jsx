@@ -1,4 +1,4 @@
-import { useModal } from "@/hooks";
+import { useModal } from "../../Hooks/useModal";
 import PropType from "prop-types";
 import React from "react";
 import Filters from "./Filters";

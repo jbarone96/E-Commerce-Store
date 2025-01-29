@@ -1,7 +1,7 @@
-import { useDidMount } from "@/hooks";
+import { useDidMount } from "../Hooks";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import firebase from "@/services/firebase";
+import firebase from "../Services/firebase";
 
 const useProducts = (id) => {
   const storeProduct = useSelector((state) =>

@@ -1,5 +1,5 @@
-import { SIGNIN } from "@/constants/routes";
-import { calculateTotal } from "@/helpers/utility";
+import { SIGNIN } from "../../../Constants/routes";
+import { calculateTotal } from "../../../Helpers/utility";
 import React from "react";
 import { useSelector } from "react-redux";
 import { Redirect, withRouter } from "react-router-dom";

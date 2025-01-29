@@ -2,7 +2,7 @@ import {
   CLEAR_PROFILE,
   SET_PROFILE,
   UPDATE_PROFILE_SUCCESS,
-} from "@/constants/constants";
+} from "../../Constants/constants";
 
 export default (state = {}, action) => {
   switch (action.type) {

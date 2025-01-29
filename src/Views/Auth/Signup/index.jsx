@@ -1,14 +1,17 @@
 import { ArrowRightOutlined, LoadingOutlined } from "@ant-design/icons";
-import { SocialLogin } from "@/components/common";
-import { CustomInput } from "@/components/formik";
-import { SIGNIN } from "@/constants/routes";
+import { SocialLogin } from "../../../Components/Common";
+import { CustomInput } from "formik";
+import { SIGNIN } from "../../../Constants/routes";
 import { Field, Form, Formik } from "formik";
-import { useDocumentTitle, useScrollTop } from "@/hooks";
+import { useDocumentTitle, useScrollTop } from "../../../Hooks";
 import PropType from "prop-types";
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { signUp } from "@/redux/actions/authActions";
-import { setAuthenticating, setAuthStatus } from "@/redux/actions/miscActions";
+import { signUp } from "../../../Redux/Actions/authActions";
+import {
+  setAuthenticating,
+  setAuthStatus,
+} from "../../../Redux/Actions/miscActions";
 import * as Yup from "yup";
 
 const SignInSchema = Yup.object().shape({

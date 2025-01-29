@@ -1,15 +1,19 @@
 import { ArrowLeftOutlined, LoadingOutlined } from "@ant-design/icons";
-import { ColorPicker, ImageLoader, MessageDisplay } from "@/components/common";
-import { ProductShowcaseGrid } from "@/components/product";
-import { RECOMMENDED_PRODUCTS, SHOP } from "@/constants/routes";
-import { displayMoney } from "@/helpers/utility";
+import {
+  ColorPicker,
+  ImageLoader,
+  MessageDisplay,
+} from "../../Components/Common";
+import { ProductShowcaseGrid } from "../../Components/Product";
+import { RECOMMENDED_PRODUCTS, SHOP } from "../../Constants/routes";
+import { displayMoney } from "../../Helpers/utility";
 import {
   useCart,
   useDocumentTitle,
   useProduct,
   useRecommendedProducts,
   useScrollTop,
-} from "@/hooks";
+} from "../../Hooks";
 import React, { useEffect, useRef, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import Select from "react-select/base";

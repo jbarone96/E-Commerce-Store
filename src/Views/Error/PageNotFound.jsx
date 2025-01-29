@@ -1,4 +1,4 @@
-import { useScrollTop } from "@/hooks";
+import { useScrollTop } from "../../Hooks";
 import PropType from "prop-types";
 import React from "react";
 

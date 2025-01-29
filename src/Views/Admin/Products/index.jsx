@@ -1,10 +1,10 @@
-import { Boundary } from "@/components/common";
-import { AppliedFilters, ProductList } from "@/components/product";
-import { useDocumentTitle, useScrollTop } from "@/hooks";
+import { Boundary } from "../../../Components/Common";
+import { AppliedFilters, ProductList } from "../../../Components/Product";
+import { useDocumentTitle, useScrollTop } from "../../../Hooks";
 import React from "react";
 import { useSelector } from "react-redux";
 import { withRouter } from "react-router-dom";
-import { selectFilter } from "@/selectors/selector";
+import { selectFilter } from "../../../Selectors/selector";
 import { ProductsNavbar } from "../Components";
 import ProductsTable from "../Components/ProductsTable";
 

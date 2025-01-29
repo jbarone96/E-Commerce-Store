@@ -5,7 +5,7 @@ import { useHistory } from "react-router-dom";
 import {
   clearRecentSearch,
   removeSelectedRecent,
-} from "@/redux/actions/filerActions";
+} from "../../Redux/Actions/filterActions";
 
 const Search = () => {
   const [searchInput, setSearchInput] = useState("");

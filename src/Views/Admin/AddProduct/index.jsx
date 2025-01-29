@@ -1,9 +1,9 @@
 import { LoadingOutlined } from "@ant-design/icons";
-import { useDocumentTitle, useScrollTop } from "@/hooks";
+import { useDocumentTitle, useScrollTop } from "../../../Hooks";
 import React, { lazy, Suspense } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { withRouter } from "react-router-dom";
-import { addProduct } from "@/redux/actions/productActions";
+import { addProduct } from "../../../Redux/Actions/productActions";
 
 const ProductForm = lazy(() => import("../Components/ProductForm"));
 

@@ -1,12 +1,12 @@
 import { LoadingOutlined } from "@ant-design/icons";
-import { Boundary, MessageDisplay } from "@/components/common";
-import { ProductGrid } from "@/components/product";
-import { useDidMount } from "@/hooks";
+import { Boundary, MessageDisplay } from "../../Components/Common";
+import { ProductGrid } from "../../Components/Product/ProductGrid";
+import { useDidMount } from "../../Hooks";
 import PropType from "prop-types";
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { setRequestStatus } from "@/redux/actions/miscActions";
-import { searchProduct } from "@/redux/actions/productActions";
+import { setRequestStatus } from "../../Redux/Actions/miscActions";
+import { searchProduct } from "../../Redux/Actions/productActions";
 
 const Search = ({ match }) => {
   const { searchKey } = match.params;

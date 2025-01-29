@@ -4,12 +4,13 @@ import {
   LogoutOutlined,
   UserOutlined,
 } from "@ant-design/icons";
-import { ACCOUNT } from "@/constants/routes";
+import { ACCOUNT } from "../../../Constants/routes";
 import PropTypes from "prop-types";
 import React, { useEffect, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link, withRouter } from "react-router-dom";
-import { signOut } from "@/redux/actions/authActions";
+import { Link } from "react-router-dom";
+import { withRouter } from "react-router";
+import { signOut } from "../../../Redux/Actions/authActions";
 
 const UserAvatar = () => {
   const { profile, isAuthenticating } = useSelector((state) => ({

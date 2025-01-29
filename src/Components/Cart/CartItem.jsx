@@ -1,12 +1,12 @@
 import { CloseOutlined } from "@ant-design/icons";
-import { CartItemControl } from "@/components/cart";
-import { ImageLoader } from "@/components/common";
+import { CartItemControl } from "../Cart";
+import { ImageLoader } from "../Common";
 import { displayCurrency } from "../../Helpers/utility";
 import PropType from "prop-types";
 import React from "react";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-import { removeFromCart } from "@/redux/actions/cartActions";
+import { removeFromCart } from "../../Redux/Actions/cartActions";
 
 const CartItem = ({ product }) => {
   const dispatch = useDispatch();

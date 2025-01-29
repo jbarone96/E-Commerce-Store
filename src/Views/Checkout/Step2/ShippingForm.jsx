@@ -1,4 +1,4 @@
-import { CustomInput, CustomMobileInput } from "@/components/formik";
+import { CustomInput, CustomMobileInput } from "../../../Components/Custom";
 import { Field, useFormikContext } from "formik";
 import React from "react";
 

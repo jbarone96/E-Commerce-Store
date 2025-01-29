@@ -5,13 +5,13 @@ import {
   GET_PRODUCTS,
   REMOVE_PRODUCT,
   SEARCH_PRODUCT,
-} from "@/constants/constants";
-import { ADMIN_PRODUCTS } from "@/constants/routes";
-import { displayActionMessage } from "@/helpers/utils";
+} from "../../Constants/constants";
+import { ADMIN_PRODUCTS } from "../../Constants/routes";
+import { displayActionMessage } from "../../Helpers/utility";
 import { all, call, put, select } from "redux-saga/effects";
-import { setLoading, setRequestStatus } from "@/redux/actions/miscActions";
-import { history } from "@/routers/AppRouter";
-import firebase from "@/services/firebase";
+import { setLoading, setRequestStatus } from "../Actions/miscActions";
+import { history } from "../../Routers/appRouter";
+import firebase from "../../Services/firebase";
 import {
   addProductSuccess,
   clearSearchState,

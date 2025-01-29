@@ -1,16 +1,16 @@
-import { ImageLoader } from "@/components/common";
-import { EDIT_PRODUCT } from "@/constants/routes";
+import { ImageLoader } from "../../../Components/Common";
+import { EDIT_PRODUCT } from "../../../Constants/routes";
 import {
   displayActionMessage,
   displayDate,
   displayMoney,
-} from "@/helpers/utility";
+} from "../../../Helpers/utility";
 import PropType from "prop-types";
 import React, { useRef } from "react";
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import { useDispatch } from "react-redux";
 import { useHistory, withRouter } from "react-router-dom";
-import { removeProduct } from "@/redux/actions/productActions";
+import { removeProduct } from "../../../Redux/Actions/productActions";
 
 const ProductItem = ({ product }) => {
   const dispatch = useDispatch();

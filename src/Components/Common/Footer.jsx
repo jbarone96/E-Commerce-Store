@@ -1,4 +1,4 @@
-import * as Route from "@/constants/routes";
+import * as Route from "../../Constants/routes";
 import logo from "../../assets/logo.png";
 import React from "react";
 import { useLocation } from "react-router-dom";

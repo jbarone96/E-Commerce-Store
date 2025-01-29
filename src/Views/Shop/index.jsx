@@ -1,8 +1,12 @@
-import { AppliedFilters, ProductGrid, ProductList } from "@/components/product";
-import { useDocumentTitle, useScrollTop } from "@/hooks";
+import {
+  AppliedFilters,
+  ProductGrid,
+  ProductList,
+} from "../../Components/Product";
+import { useDocumentTitle, useScrollTop } from "../../Hooks";
 import React from "react";
 import { shallowEqual, useSelector } from "react-redux";
-import { selectFilter } from "@/selectors/selector";
+import { selectFilter } from "../../Selectors/selector";
 
 const Shop = () => {
   useDocumentTitle("Shop | Reactify");
